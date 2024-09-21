@@ -1,0 +1,661 @@
+<?php
+	// Common file include
+    include 'common/common.php';
+	
+	$pageHasCMSForm = 'false'; // Make true if the page has html version of CMS form
+	
+	// Please include page related js files here
+    $pageRelatedJsFiles = array(
+		JS_PATH."responsiveslides.js",
+		JS_PATH."jquery.flexisel.js",
+		JS_PATH."functions.js",
+    );
+	
+	// Please include Page related css files here, to add multiple style sheets keep each style sheet name in double quotes separated by comma.
+    $pageRelatedCssFiles = array("home.css");
+	
+	// Keep h1 tag text here
+	$pageHeading = "Home";
+	$metaInfo = $pageHeading." | ".$copyRightText;
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>CSS HOME</title>
+	<meta name="description" content="<?php echo $metaInfo; ?>">
+	<meta name="keywords" content="<?php echo $metaInfo; ?>">
+	<meta property="og:title" content="<?php echo $metaInfo; ?>">
+	<meta property="og:description" content="<?php echo $metaInfo; ?>">
+	<?php include 'includes/head-tag-main.php';?>
+    
+    
+    <style>/* ---------- Theme CSS ---------- */
+#Map-Container, header, #Banner-Container, #Intro-main, #Specialities-main, #Toprank-main, #Dr-sec-main, #Top-Doctors-main, #Patient-testimonials-vedio-main, #Patient-testimonials-main, #Latest-blog-main, #Patient-resources-main, #Location-main, #Map-main, #Credibality-main, footer {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+}
+#Accessibility, #Header, #Banner-in, #Intro-in, #Specialities-in, #Toprank-in, #Dr-sec-in, #Top-Doctors-in, #Patient-testimonials-vedio-in, #Patient-testimonials-in, #Latest-blog-in, #Patient-resources-in, #Location-in, #Map-in, #Credibality-in, #Content-Main, #Footer-in, #Main-Menu, #Mobile-Menu, #Service, #youtube-videos  {
+	max-width: 1200px;
+	min-width: 300px;
+	margin: 0px auto;
+	padding: 0px;
+	position: relative;
+}
+
+/* Default Custom CSS */
+.img-l {
+	margin: 0px 15px 10px 0px;
+}
+.img-r {
+	margin: 0px 0px 10px 15px;
+}
+.img-c {
+	margin: 10px;
+}
+/* Selection CSS */
+#Container ::selection {
+	background: #CCC;
+	color: #000;
+}
+/* ADA Icon CSS */
+.adaOn span {
+	background: #003263;
+	color: #fff;
+	border-radius: 50%;
+}
+/* Scroller CSS */
+#Scroller a {
+	background: #fff;
+	border: 2px solid #000;
+	color: #000;
+	border-radius: 50%;
+}
+
+    
+#subtopnav {
+	position: fixed;
+	background-color: #282A35;
+	color: #f1f1f1;
+	padding: 0;
+	letter-spacing: 1px;
+	font-family: 'Source Sans Pro Topnav', sans-serif;
+	font-size: 0;
+	top: 33px;
+	z-index: 2;
+	width: 100%;
+	white-space: nowrap;
+	overflow: auto;
+	scrollbar-width: none;
+	height: 33px;
+}
+
+.w3-example {
+	background-color: #E7E9EB;
+	border-radius: 5px;
+	padding: 0.01em 16px;
+	margin: 20px 0;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+
+.w3-code {
+	width: auto;
+	background-color: #fff;
+	color: #000;
+	padding: 8px 12px;
+	border-left: 4px solid #4CAF50;
+	word-wrap: break-word;
+}
+        #menubtn_container {
+	position: fixed;
+	left: 0;
+	top: 56px;
+	xborder-right: 10px solid rgba(40, 42, 53,0.5);
+	height: 33px;
+	color: white;
+	font-size: 15px;
+}
+        #subtopnav a.active {
+	background-color: #04AA6D !important;
+	color: #fff !important;
+}
+       #subtopnav a {
+	display: inline-block;
+	width: 15%;
+	margin: 0 !important;
+	padding: 5px 15px 5px 15px !important;
+	font-size: 15px !important;
+	text-decoration: none;
+	line-height: 1.5;
+	text-align: center;
+}
+        #subtopnav a:hover, #subtopnav a:focus, #subtopnav a:active {
+	background-color: #000000 !important;
+	color: #ffffff !important;
+}
+        .w3-bar .w3-button {
+	white-space: normal;
+}
+        .w3-bar .w3-bar-item {
+	padding: 8px 16px;
+	float: left;
+	width: auto;
+	border: none;
+	display: block;
+	outline: 0;
+}
+        .w3-left {
+	float: left !important;
+}
+        .fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 fontawesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+}
+        .fa-logo::before {
+	content: '\e822';
+}
+        .w3-sidebar.w3-collapse {
+	display: block !important;
+}
+        #leftmenuinner {
+	padding-top: 87px;
+}
+        #leftmenuinner {
+	position: fixed;
+	top: 0;
+	padding-bottom: 0;
+	height: 100%;
+	width: 250px;
+	background-color: transparent;
+}
+        #leftmenuinnerinner {
+	height: 100%;
+	width: 100%;
+	background-color: #E7E9EB;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+        #sidenav #leftmenuinnerinner {
+	position: relative;
+}
+        #sidenav h2 {
+	font-size: 21px;
+	padding-left: 16px;
+	margin: -4px 0 4px 0;
+	width: 204px;
+}
+        #sidenav #leftmenuinnerinner a {
+	position: relative;
+	padding: 2px 15px 1px 40px;
+	width: 100%;
+}
+        #sidenav a.active {
+	background-color: #04AA6D !important;
+	color: #ffffff !important;
+}
+        #sidenav a:hover, #sidenav a:focus {
+	color: #000000;
+	background-color: #cccccc;
+}
+        #sidenav a {
+	font-family: "Segoe UI",Arial,sans-serif;
+	text-decoration: none;
+	display: block;
+	padding: 2px 1px 1px 16px;
+}
+        #sidenav #leftmenuinnerinner a {
+	position: relative;
+	padding: 2px 15px 1px 40px;
+	width: 100%;
+}
+        a {
+	background-color: transparent;
+}
+        
+
+#w3_cert_badge {
+  position: absolute;
+  right: 5%;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: -20%;
+}
+
+#w3_cert_arrow {
+  position: absolute;
+  right: 220px;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: 0;
+  z-index: 1;
+}
+
+#getdiploma {
+  position: relative;
+  padding: 0 60px 50px 60px;
+  margin-bottom: 125px;
+  border-radius: 16px;
+  background-color: #282A35;
+  color: #FFC0C7;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#getdiploma h2 {
+  font-size:50px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma p {
+  font-size: 42px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma a {
+  border-radius: 50px;
+  mxargin-top: 50px;
+  font-size: 18px;
+  background-color: #04AA6D;
+  padding: 17px 55px
+}
+
+#getdiploma a:hover,
+#getdiploma a:active {
+  background-color: #059862 !important;
+}
+
+
+@media screen and (max-width: 1442px) {
+  #w3_cert_arrow {
+    right: 212px;
+    bottom: -15px;
+  }
+}
+
+
+@media screen and (max-width: 1202px) {
+  #w3_cert_arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #w3_cert_arrow {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  #w3_cert_arrow {
+    display: none;
+  }
+  #getdiploma h2 {
+    font-size: 44px;
+  }
+  #getdiploma p {
+    font-size: 30px;
+  }
+
+  #getdiploma a {
+    width: 100%;
+  }
+  #w3_cert_badge {
+    top: -16px;
+    right: -8px;
+    width: 100px;
+  }
+  #getdiploma  {
+    margin-bottom: 55px;
+  }
+}
+        #main {
+	padding: 16px 32px 32px 32px;
+	border-right: 1px solid #f1f1f1;
+}
+        #midcontentadcontainer, #mainLeaderboard {
+	text-align: center;
+	margin-left: -16px;
+	margin-right: -16px;
+}
+        #mainLeaderboard {
+	height: 90px;
+}
+        h1 {
+	font-size: 42px;
+}
+        .w3-white, .w3-hover-white:hover {
+	color: #000 !important;
+}
+        .w3-container::after, .w3-container::before, .w3-panel::after, .w3-panel::before, .w3-row::after, .w3-row::before, .w3-row-padding::after, .w3-row-padding::before, .w3-cell-row::before, .w3-cell-row::after, .w3-clear::after, .w3-clear::before, .w3-bar::before, .w3-bar::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+        .nextprev a.w3-right, .nextprev a.w3-left {
+	background-color: #04AA6D;
+	color: #ffffff;
+	border-color: #04AA6D;
+}
+        .nextprev a.w3-right, .nextprev a.w3-left {
+	background-color: #04AA6D;
+	color: #ffffff;
+	border-color: #04AA6D;
+}
+        .w3-info {
+	background-color: #D9EEE1;
+	border-left: none;
+	padding: 32px;
+	margin: 24px;
+	margin-left: -32px;
+	margin-right: -32px;
+}
+        .w3-example p, .w3-info p, .w3-note p, .w3-warning p {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+        .w3-info .w3-btn {
+	background-color: #04AA6D;
+	border-radius: 5px;
+}
+        .w3-example {
+	padding: 8px 20px;
+	margin: 24px -20px;
+	box-shadow: none !important;
+}
+        #w3-exerciseform {
+	padding: 20px;
+	margin: 32px -20px;
+}
+        #w3-exerciseform {
+	background-color: #282A35;
+	padding: 16px;
+	color: #ffffff;
+	border-radius: 5px;
+}
+       .w3-col.l10 {
+	width: 75.333%;
+	float: right;
+}
+        
+        
+    
+/* Header CSS */
+#Header {
+	min-height: 150px;
+}
+/* Menu CSS */
+.menu {
+	text-align: center;
+}
+.menu li {
+	font: normal 14px/20px Verdana, Arial, Helvetica, sans-serif;
+	height: 50px;
+}
+.menu li a {
+	padding: 15px 0px;
+	color: #000;
+}
+.menu ul li {
+	background: #CCC;
+}
+.menu ul li a {
+	padding: 10px 15px 10px 30px;
+}
+.menu li.menu-home {
+	width: 50px;
+}
+.menu-home a::before {
+	font-size: 20px;
+}
+/* Mobile Menu CSS */
+.toggleMenu {
+	font: bold 16px/30px Verdana, Arial, Helvetica, sans-serif;
+}
+.toggleMenu a {
+	border-radius: 5px;
+	border: 2px solid #ccc;
+}
+.Wrapper {
+	font: normal 14px/20px Verdana, Arial, Helvetica, sans-serif;
+}
+    
+    .w3-col.l10 {
+	width: 75.333%;
+	float: right;
+	margin: 90px auto 10px;
+}
+    h1 {
+	font-size: 42px;
+	margin: 25px auto;
+}
+    
+    
+    </style>
+    
+    
+    
+    
+    
+</head>
+    
+    <a id="w3-logo" href="https://www.w3schools.com" class="w3-bar-item w3-button w3-hover-none w3-left ga-top ga-top-w3home" title="Home" style="width: 75px" aria-label="Home link">
+      <i class="fa fa-logo ws-hover-text-green" style="position: relative; z-index: 1; color: #04aa6d; font-size: 36px !important" aria-hidden="true"></i>
+    </a>
+
+<div id="subtopnav" onmousedown="startscrolling_subtopnav(event)" onmousemove="scrolling_subtopnav(event)" onmouseup="endscrolling_subtopnav(event)" onclick="return pellessii(event)">
+  <div id="scroll_left_btn" class="w3-hide-medium w3-hide-small" style="display: none;">
+    <span onmousedown="scrollmenow(-1)" onmouseup="stopscrollmenow()" onmouseout="stopscrollmenow()">&nbsp;&nbsp;&nbsp;❮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  </div>
+  <div id="menubtn_container">
+    <span>
+        
+        <a href="javascript:void(0);" class="topnav-icons fa fa-menu w3-hide-large w3-left w3-bar-item w3-button ga-nav" style="line-height:1.1;padding-top:8px!important;padding-bottom:8px!important;" onclick="open_menu()" title="Menu"></a>
+        
+    </span>      
+  </div>
+  <a href="/html-introduction.php" class="ga-nav subtopnav_firstitem active" title="HTML Tutorial">HTML</a>
+  <a href="/css-home.php" class="ga-nav" title="CSS Tutorial">CSS</a>
+  <a href="/javascript.php" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+  <a href="/sql.php" class="ga-nav" title="SQL Tutorial">SQL</a>
+  <a href="/python.php" class="ga-nav" title="Python Tutorial">PYTHON</a>
+  <a href="/java.php" class="ga-nav" title="Java Tutorial">JAVA</a>
+  <a href="/php-page.php" class="ga-nav" title="PHP Tutorial">PHP</a>
+  
+  <a href="javascript:void(0)" style="width:50px;visibility:hidden;"></a>  
+  <div id="btn_container_subtopnav">
+    <div id="scroll_right_btn" class="w3-hide-medium w3-hide-small" style="display: block;">
+      <span onmousedown="scrollmenow(1)" onmouseup="stopscrollmenow()" onmouseout="stopscrollmenow()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;❯&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+</div>
+    
+    <div class="w3-sidebar w3-collapse" id="sidenav" data-scrolled="true">
+  <div id="leftmenuinner">
+<div id="leftmenuinnerinner">
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='w3-button w3-hide-large w3-large w3-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">CSS</span> Tutorial</h2>
+<a target="_top" href="css-home.php">CSS HOME</a>
+<a target="_top" href="css-introduction.php" class="active">CSS Introduction</a>
+<a target="_top" href="css_syntax.asp">CSS Syntax</a>
+<a target="_top" href="css_selectors.asp">CSS Selectors</a>
+<a target="_top" href="css_howto.asp">CSS How To</a>
+<a target="_top" href="css_comments.asp">CSS Comments</a>
+<a target="_top" href="css_colors.asp" class="overview_header">CSS Colors<span class="w3s-accordion"></span></a>
+<div class="tut_overview overview_body">
+  <a target="_top" href="css_colors.asp" class="-height-0" data-height-class="-height-0">Colors</a>
+  <a target="_top" href="css_colors_rgb.asp" class="-height-0" data-height-class="-height-0">RGB</a>
+  <a target="_top" href="css_colors_hex.asp" class="-height-0" data-height-class="-height-0">HEX</a>
+  <a target="_top" href="css_colors_hsl.asp" class="-height-0" data-height-class="-height-0">HSL</a>
+</div>
+<a target="_top" href="css_background.asp" class="overview_header">CSS Backgrounds<span class="w3s-accordion"></span></a>
+
+    </div>
+  </div>
+</div>
+<div class="w3-row w3-white">
+    
+    <div class="w3-col l10 m12" id="main">
+      <div id="mainLeaderboard" style="overflow:hidden;">
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="adngin-main_leaderboard-0" data-google-query-id="COvtqe7ezIgDFfegrAIdUQQaRg"><div id="google_ads_iframe_/22152718,16833175/sws-hb//w3schools.com//main_leaderboard_0__container__" style="border: 0pt; width: 728px; height: 0px;"></div></div>
+        <!-- adspace leaderboard -->
+
+      </div>
+
+<h1>CSS <span class="color_h1">Tutorial</span></h1>
+
+
+<div class="w3-panel w3-info intro">
+<p>CSS is the language we use to style an HTML document.</p>
+<p>CSS describes how HTML elements should be displayed.</p>
+<p>This tutorial will teach you CSS from basic to advanced.</p>
+</div>
+<hr>
+
+<h2>Examples in Each Chapter</h2>
+<p>This CSS tutorial contains hundreds of CSS examples.</p>
+<p>With our online editor, you can edit the CSS, and click on a button to view the result.</p>
+
+<div class="w3-example">
+<h3>CSS Example</h3>
+<div class="w3-code notranslate cssHigh"><span class="cssselectorcolor" style="color:brown">
+body
+<span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:red"><br>&nbsp;&nbsp;background-color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> lightblue<span class="cssdelimitercolor" style="color:black">;</span></span><br></span><span class="cssdelimitercolor" style="color:black">}</span><br>
+<br>h1
+<span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:red"><br>
+&nbsp;&nbsp;color<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> white<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+&nbsp;&nbsp;text-align<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> center<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+</span><span class="cssdelimitercolor" style="color:black">}</span><br><br>
+p
+<span class="cssdelimitercolor" style="color:black">{</span><span class="csspropertycolor" style="color:red"><br>
+  &nbsp;
+font-family<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> verdana<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+&nbsp;&nbsp;font-size<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> 20px<span class="cssdelimitercolor" style="color:black">;</span></span><br>
+</span><span class="cssdelimitercolor" style="color:black">}</span> </span></div>
+<a target="_blank" href="tryit.asp?filename=trycss_default" class="w3-btn w3-margin-bottom">Try it Yourself »</a></div>
+<p><b>Click on the "Try it Yourself" button to see how it works.</b></p>
+<hr>
+
+
+<style>  
+
+#w3_cert_badge {
+  position: absolute;
+  right: 5%;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: -20%;
+}
+
+#w3_cert_arrow {
+  position: absolute;
+  right: 220px;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: 0;
+  z-index: 1;
+}
+
+#getdiploma {
+  position: relative;
+  padding: 0 60px 50px 60px;
+  margin-bottom: 125px;
+  border-radius: 16px;
+  background-color: #282A35;
+  color: #FFC0C7;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#getdiploma h2 {
+  font-size:50px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma p {
+  font-size: 42px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma a {
+  border-radius: 50px;
+  mxargin-top: 50px;
+  font-size: 18px;
+  background-color: #04AA6D;
+  padding: 17px 55px
+}
+
+#getdiploma a:hover,
+#getdiploma a:active {
+  background-color: #059862 !important;
+}
+
+
+@media screen and (max-width: 1442px) {
+  #w3_cert_arrow {
+    right: 212px;
+    bottom: -15px;
+  }
+}
+
+
+@media screen and (max-width: 1202px) {
+  #w3_cert_arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #w3_cert_arrow {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  #w3_cert_arrow {
+    display: none;
+  }
+  #getdiploma h2 {
+    font-size: 44px;
+  }
+  #getdiploma p {
+    font-size: 30px;
+  }
+
+  #getdiploma a {
+    width: 100%;
+  }
+  #w3_cert_badge {
+    top: -16px;
+    right: -8px;
+    width: 100px;
+  }
+  #getdiploma  {
+    margin-bottom: 55px;
+  }
+}
+</style>
+
+
+  
+          </div></div>
+</html>
